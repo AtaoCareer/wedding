@@ -1,7 +1,7 @@
 <?php
-require_once "jssdk.php";
-$jssdk = new JSSDK("wx9dcf603b73eb1a91", "f00469fe3027257112a1f192e79e470e");
-$signPackage = $jssdk->GetSignPackage();
+// require_once "jssdk.php";
+// $jssdk = new JSSDK("wx9dcf603b73eb1a91", "f00469fe3027257112a1f192e79e470e");
+// $signPackage = $jssdk->GetSignPackage();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,8 +103,10 @@ $signPackage = $jssdk->GetSignPackage();
                 }
             });
 
-
-
+            //字体滑动动画
+            $('#page1_title').animate({left:0/p+'px'},1000);
+            // var test = setTimeout("$('#page1_title').fadeIn(500)",1000));
+        
 
 
 
@@ -154,6 +156,8 @@ $signPackage = $jssdk->GetSignPackage();
 
             $('#page6_bt').width(540/p).css({left:(x-540/p)/2+'px',top:890/p+'px'});
             $('#shutup').width(300/p).css({right:-115/p+'px',bottom:0/p+'px'});
+
+            $('#page1_title').width(684/p).css({left:-100/p+'px',top:500/p+'px'});
 
 
 
@@ -291,9 +295,10 @@ $signPackage = $jssdk->GetSignPackage();
     <audio id="audimp3" src="sound/bgm.mp3" autoplay="" loop=""></audio>
     <img id="shutup" class="shutup lay4" src="./images/shutupk.png">
     <div id="page1" class="page">   <!--不能是带有图层顺序的 -->
-        <img class="img_bg" src="./images/page1_bg.jpg"> 
+        <img class="img_bg" src="./images/page1_test.jpg"> 
         <!-- 每页的背景，class到时候是取宽高用的 --> 
         <!-- <img id="page1_bt" class="lay2" src="./images/page1_bt.png"> -->
+        <img id="page1_title" class="lay2" src="./images/page1_title.png">
         <img id="arrow_1" class="lay1" src="./images/arrow.png">
     </div>
     <div id="page2" class="page">
